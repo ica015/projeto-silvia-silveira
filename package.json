@@ -8,7 +8,8 @@
     "font-awesome": "^4.7.0"
   },
   "devDependencies": {
-    "mkdirp": "^0.5.1"
+    "mkdirp": "^0.5.1",
+    "node-sass": "^4.7.2"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -16,7 +17,8 @@
     "prestart": "echo Prestart",
     "poststart": "echo Poststart",
     "preinstall": "mkdirp src/components/bootstrap src/components/font-awesome",
-    "postinstall": "cp -r node_modules/bootstrap/dist src/components/bootstrap/ && cp -r node_modules/font-awesome/css src/components/font-awesome/ && cp -r node_modules/font-awesome/fonts src/components/font-awesome/"
+    "postinstall": "cp -r node_modules/bootstrap/dist src/components/bootstrap/ && cp -r node_modules/font-awesome/css src/components/font-awesome/ && cp -r node_modules/font-awesome/fonts src/components/font-awesome/",
+	"nodesass": "node-sass"
   },
   "author": "Carlos Amorim",
   "license": "ISC"
