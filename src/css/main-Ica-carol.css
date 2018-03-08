@@ -164,6 +164,8 @@ h1, h2, h3, h4, h5, h6, .title {
   background-color: #c5ddd9;
   color: white;
   padding: 1em 0; }
+  .rodape .text-right {
+    width: 100%; }
   .rodape ul {
     overflow: auto;
     padding: 0;
