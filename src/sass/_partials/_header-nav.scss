@@ -1,9 +1,26 @@
+$altura: 50px;
+.js.menu-opened{
+    overflow: hidden;
+    &:after{
+        content: "";
+        display: block;
+        position: fixed;
+        top: $altura;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: #000;
+        opacity: .5;
+    }
+}
+
 .header-nav{
-    $h: 50px;
+    $breakpoint: 680px;
+    
     background-color: lighten($main-color, 10%);
     
     .js &{
-        height: $h;
+        height: $altura;
         
         
         .container{
@@ -14,7 +31,7 @@
     &__logo{
         display: inline-block;
         max-width: 350px;
-        height: $h;
+        height: $altura;
         position: relative;
         top: 10px;
         z-index: 10;
@@ -40,6 +57,10 @@
             &:hover, &:focus{
                 background: lighten($main-color, 5%);
             }
+            
+            @media screen and (min-width: #{$breakpoint}){
+                display: none;
+            }
         }
     }
     &__menu{
@@ -50,7 +71,7 @@
         a{
             color: white;
             display: block;
-            font-size: 1.5em;
+            font-size: 1.3em;
             border-top: 1px solid darken($main-color, 5%);
             padding: 1em;
             
@@ -60,10 +81,44 @@
         }
         
         .js &{
-            display: none;
+            @media screen and (max-width: #{$breakpoint}){
+                background: darken($main-color, 10);
+                z-index: 9;
+                position: fixed;
+                top: $altura;
+                left: -100%;
+                width: 70%;
+                bottom:0;
+                transition: left .3s ease-out;
+            }
+            
         }
-        .menu-openned{
+        .menu-opened &{
             display: block;
+            
+            @media screen and (max-width: #{$breakpoint}){
+                left: 0;
+            }
+        }
+        @media screen and (min-width: #{$breakpoint}){
+            display: inline-block;
+            float: right;
+            height: $altura;
+
+            li{
+                display: inline-block;
+                
+                a{
+                    border-top: none;
+                    transition: all .3s ease-in-out;
+                    padding: 15px;
+                    
+                    &:hover{
+                        transform: translateY(.5em);
+                        box-shadow: 0 5px 15px -10px black;
+                    }
+                }
+            }
         }
         
     }
