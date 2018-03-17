@@ -1,8 +1,18 @@
 .rodape{
-    background-color: lighten($main-color, 30);
-    color: white;
+    background-color: lighten($main-color, 30%);
+    color: darken($main-color, 20%);
     padding: 1em 0;
     
+    svg{
+        font-size: 22px;
+    }
+    .color-icon{
+        fill: darken($main-color, 10);
+        transition: fill .5s;
+        &:hover{
+            fill: darken($main-color, 30);
+        }
+    }
     .text-right{
         width: 100%;
     }
@@ -21,7 +31,7 @@
         }
         li a{
             font-size: 1.5em;
-            color: white;
+            color: inherit;
             display: block;
             text-align: right;
         }

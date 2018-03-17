@@ -204,7 +204,7 @@ h1, h2, h3, h4, h5, h6, .title {
 
 .rodape {
   background-color: #c5ddd9;
-  color: white;
+  color: $main-color;
   padding: 1em 0; }
   .rodape .text-right {
     width: 100%; }

@@ -2,21 +2,26 @@
 	$h: 300px;
     $largura_cenario: 2400px;
 	background-color: $main-color;
-    padding: 96px 0 0 0 ;
-    margin-bottom: 0;
+    padding: 96px 0 0 0;
+    margin-bottom: 32px;
+    border-radius: 0;
+    overflow-x: auto;
     
     
     .header-animado__title{
+        font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
         color: #00151a;
         font-size: 38px;
         font-weight: bold;
     }
     
     .header-animado__subtitle{
+        font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
         color: white;
         font-size: 32px;
         font-weight: 300;
         line-height: 1.5;
+        margin-bottom: 2em;
     }
     
     &__ilustra{
